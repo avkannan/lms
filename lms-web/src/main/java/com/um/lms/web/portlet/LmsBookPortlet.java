@@ -56,4 +56,18 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
         log.info("created");
         bookLocalServiceUtil.addbook(book);
     }
+    @ProcessAction(name = "updateBook")
+    public void updateBook(ActionRequest actionRequest,ActionResponse actionResponse) {
+    	long bookId = CounterLocalServiceUtil.increment(book.class.getName());
+    	String enrollmentNo = ParamUtil.getString(actionRequest, "enrollmentNo");
+    	String firstName = ParamUtil.getString(actionRequest, "firstName");
+    	String lastName = ParamUtil.getString(actionRequest, "lastName");
+    	String contactNo = ParamUtil.getString(actionRequest, "contactNo");
+    	String city = ParamUtil.getString(actionRequest, "city");
+    	
+    	book book = bookLocalServiceUtil.createbook(CounterLocalServiceUtil.increment());
+    	book.setBookID(1);
+    	log.info("created");
+    	bookLocalServiceUtil.updatebook(book);
+    }
 }
