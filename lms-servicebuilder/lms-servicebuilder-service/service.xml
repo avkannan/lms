@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_2_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.um.lms.sb">
+	<namespace>lms</namespace>
+	<entity local-service="true" name="student"
+		remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+		<column name="studentID" primary="true" type="long" />
+
+		<!-- Group instance -->
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="firstName" type="String" />
+		<column name="middleName" type="String" />
+		<column name="lastName" type="String" />
+		<column name="displayName" type="String" />
+		<column name="salutation" type="String" />
+		<column name="departmentID" type="String" />
+		<column name="batch" type="String" />
+		<column name="duration" type="long" />
+		<column name="registrationNo" type="long" />
+
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="displayName" />
+		</order>
+	</entity>
+	<entity local-service="true" name="staff" remote-service="true"
+		uuid="true">
+
+		<!-- PK fields -->
+		<column name="staffID" primary="true" type="long" />
+
+		<!-- Group instance -->
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="firstName" type="String" />
+		<column name="middleName" type="String" />
+		<column name="lastName" type="String" />
+		<column name="displayName" type="String" />
+		<column name="salutation" type="String" />
+		<column name="departmentID" type="String" />
+		<column name="staffType" type="String" />
+		<column name="designation" type="String" />
+		<column name="expertise" type="String" />
+		<column name="qualifcation" type="String" />
+		<column name="experience" type="long" />
+
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="displayName" />
+		</order>
+	</entity>
+</service-builder>

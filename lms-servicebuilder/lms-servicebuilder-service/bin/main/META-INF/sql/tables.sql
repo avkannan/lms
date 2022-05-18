@@ -1,0 +1,41 @@
+create table lms_staff (
+	uuid_ VARCHAR(75) null,
+	staffID LONG not null primary key,
+	groupId LONG,
+	companyId LONG,
+	userId LONG,
+	userName VARCHAR(75) null,
+	createDate DATE null,
+	modifiedDate DATE null,
+	firstName VARCHAR(75) null,
+	middleName VARCHAR(75) null,
+	lastName VARCHAR(75) null,
+	displayName VARCHAR(75) null,
+	salutation VARCHAR(75) null,
+	departmentID VARCHAR(75) null,
+	staffType VARCHAR(75) null,
+	designation VARCHAR(75) null,
+	expertise VARCHAR(75) null,
+	qualifcation VARCHAR(75) null,
+	experience LONG
+);
+
+create table lms_student (
+	uuid_ VARCHAR(75) null,
+	studentID LONG not null primary key,
+	groupId LONG,
+	companyId LONG,
+	userId LONG,
+	userName VARCHAR(75) null,
+	createDate DATE null,
+	modifiedDate DATE null,
+	firstName VARCHAR(75) null,
+	middleName VARCHAR(75) null,
+	lastName VARCHAR(75) null,
+	displayName VARCHAR(75) null,
+	salutation VARCHAR(75) null,
+	departmentID VARCHAR(75) null,
+	batch VARCHAR(75) null,
+	duration LONG,
+	registrationNo LONG
+);

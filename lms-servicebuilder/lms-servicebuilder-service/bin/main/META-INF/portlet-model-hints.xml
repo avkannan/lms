@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.um.lms.sb.model.staff">
+		<field name="uuid" type="String" />
+		<field name="staffID" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="firstName" type="String" />
+		<field name="middleName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="displayName" type="String" />
+		<field name="salutation" type="String" />
+		<field name="departmentID" type="String" />
+		<field name="staffType" type="String" />
+		<field name="designation" type="String" />
+		<field name="expertise" type="String" />
+		<field name="qualifcation" type="String" />
+		<field name="experience" type="long" />
+	</model>
+	<model name="com.um.lms.sb.model.student">
+		<field name="uuid" type="String" />
+		<field name="studentID" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="firstName" type="String" />
+		<field name="middleName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="displayName" type="String" />
+		<field name="salutation" type="String" />
+		<field name="departmentID" type="String" />
+		<field name="batch" type="String" />
+		<field name="duration" type="long" />
+		<field name="registrationNo" type="long" />
+	</model>
+</model-hints>

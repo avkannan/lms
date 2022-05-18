@@ -1,0 +1,10 @@
+Bundle-Name: lms-servicebuilder-api
+Bundle-SymbolicName: com.um.lms.sb.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.um.lms.sb.exception,\
+	com.um.lms.sb.model,\
+	com.um.lms.sb.service,\
+	com.um.lms.sb.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../lms-servicebuilder-service/service.xml
