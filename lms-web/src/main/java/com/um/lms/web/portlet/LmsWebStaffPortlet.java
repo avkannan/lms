@@ -58,7 +58,21 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
         staffLocalServiceUtil.addstaff(staff);
     }
     
+    @ProcessAction(name = "updateStaff")
+    public void updateStaff(ActionRequest actionRequest,ActionResponse actionResponse) throws PortalException {
+        long staffId = CounterLocalServiceUtil.increment(staff.class.getName());
+        String enrollmentNo = ParamUtil.getString(actionRequest, "enrollmentNo");
+        String firstName = ParamUtil.getString(actionRequest, "firstName");
+        String lastName = ParamUtil.getString(actionRequest, "lastName");
+        String contactNo = ParamUtil.getString(actionRequest, "contactNo");
+        String city = ParamUtil.getString(actionRequest, "city");
     
+        staff staff = staffLocalServiceUtil.getstaff(1l);
+        staff.setFirstName(firstName);
+        staff.setLastName(lastName);
+        log.info("update");
+        staffLocalServiceUtil.updatestaff(staff);
+    }
     
     
     
