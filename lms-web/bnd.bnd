@@ -1,0 +1,4 @@
+Bundle-Name: lms-web
+Bundle-SymbolicName: com.um.lms.web
+Bundle-Version: 1.0.0
+Export-Package: com.um.lms.web.constants

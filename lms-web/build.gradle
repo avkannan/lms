@@ -1,0 +1,5 @@
+dependencies {
+compileOnly 'com.liferay.portal:release.dxp.api:7.2.10.1'
+compile project(":modules:lms-servicebuilder:lms-servicebuilder-api")
+
+}
