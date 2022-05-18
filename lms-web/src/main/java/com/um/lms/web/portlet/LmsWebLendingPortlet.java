@@ -57,6 +57,21 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
         log.info("created");
         staffLocalServiceUtil.addstaff(staff);
     }
+    @ProcessAction(name = "checkout")
+    public void checkout(ActionRequest actionRequest,ActionResponse actionResponse) {
+    	long staffId = CounterLocalServiceUtil.increment(staff.class.getName());
+    	String enrollmentNo = ParamUtil.getString(actionRequest, "enrollmentNo");
+    	String firstName = ParamUtil.getString(actionRequest, "firstName");
+    	String lastName = ParamUtil.getString(actionRequest, "lastName");
+    	String contactNo = ParamUtil.getString(actionRequest, "contactNo");
+    	String city = ParamUtil.getString(actionRequest, "city");
+    	
+    	staff staff = staffLocalServiceUtil.createstaff(CounterLocalServiceUtil.increment());
+    	staff.setFirstName(firstName);
+    	staff.setLastName(lastName);
+    	log.info("created");
+    	staffLocalServiceUtil.addstaff(staff);
+    }
     
    
     
