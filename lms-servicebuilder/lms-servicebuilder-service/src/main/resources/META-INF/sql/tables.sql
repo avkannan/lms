@@ -30,6 +30,26 @@ create table lms_book (
 	quantity INTEGER
 );
 
+create table lms_lending (
+	uuid_ VARCHAR(75) null,
+	lendingID LONG not null primary key,
+	groupId LONG,
+	companyId LONG,
+	userId LONG,
+	userName VARCHAR(75) null,
+	createDate DATE null,
+	modifiedDate DATE null,
+	bookTitle LONG,
+	bookId LONG,
+	studentId LONG,
+	staffId LONG,
+	dueDate DATE null,
+	lateFee DOUBLE,
+	checkoutDate DATE null,
+	loanPeriod LONG,
+	checkinDate DATE null
+);
+
 create table lms_lookup (
 	uuid_ VARCHAR(75) null,
 	lookupID LONG not null primary key,

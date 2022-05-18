@@ -31,6 +31,25 @@
 		<field name="title" type="int" />
 		<field name="quantity" type="int" />
 	</model>
+	<model name="com.um.lms.sb.model.lending">
+		<field name="uuid" type="String" />
+		<field name="lendingID" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="bookTitle" type="long" />
+		<field name="bookId" type="long" />
+		<field name="studentId" type="long" />
+		<field name="staffId" type="long" />
+		<field name="dueDate" type="Date" />
+		<field name="lateFee" type="float" />
+		<field name="checkoutDate" type="Date" />
+		<field name="loanPeriod" type="long" />
+		<field name="checkinDate" type="Date" />
+	</model>
 	<model name="com.um.lms.sb.model.lookup">
 		<field name="uuid" type="String" />
 		<field name="lookupID" type="long" />

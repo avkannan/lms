@@ -27,6 +27,7 @@ import com.liferay.portal.kernel.util.PortalUtil;
 import com.um.lms.sb.model.publication;
 import com.um.lms.sb.service.persistence.authorPersistence;
 import com.um.lms.sb.service.persistence.bookPersistence;
+import com.um.lms.sb.service.persistence.lendingPersistence;
 import com.um.lms.sb.service.persistence.lookupPersistence;
 import com.um.lms.sb.service.persistence.publicationPersistence;
 import com.um.lms.sb.service.persistence.staffPersistence;
@@ -116,6 +117,9 @@ public abstract class publicationServiceBaseImpl
 
 	@Reference
 	protected bookPersistence bookPersistence;
+
+	@Reference
+	protected lendingPersistence lendingPersistence;
 
 	@Reference
 	protected lookupPersistence lookupPersistence;

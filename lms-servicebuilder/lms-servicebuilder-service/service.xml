@@ -201,4 +201,34 @@
 			<order-column name="lookupName" />
 		</order>
 	</entity>
+	<entity local-service="true" name="lending" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+		<column name="lendingID" primary="true" type="long" />
+
+		<!-- Group instance -->
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="bookTitle" type="long" />
+		<column name="bookId" type="long" />
+		<column name="studentId" type="long" />
+		<column name="staffId" type="long" />
+		<column name="dueDate" type="Date" />
+		<column name="lateFee" type="float" />
+		<column name="checkoutDate" type="Date" />
+		<column name="loanPeriod" type="long" />
+		<column name="checkinDate" type="Date" />
+		
+		
+	</entity>
 </service-builder>
