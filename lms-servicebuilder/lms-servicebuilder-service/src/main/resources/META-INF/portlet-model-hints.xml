@@ -1,6 +1,66 @@
 <?xml version="1.0"?>
 
 <model-hints>
+	<model name="com.um.lms.sb.model.author">
+		<field name="uuid" type="String" />
+		<field name="authorID" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="firstName" type="String" />
+		<field name="middleName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="displayName" type="String" />
+		<field name="salutation" type="String" />
+	</model>
+	<model name="com.um.lms.sb.model.book">
+		<field name="uuid" type="String" />
+		<field name="bookID" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="authorID" type="long" />
+		<field name="publicationID" type="long" />
+		<field name="edition" type="String" />
+		<field name="title" type="int" />
+		<field name="quantity" type="int" />
+	</model>
+	<model name="com.um.lms.sb.model.lookup">
+		<field name="uuid" type="String" />
+		<field name="lookupID" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="lookupKey" type="String" />
+		<field name="lookupValue" type="String" />
+		<field name="lookupName" type="int" />
+	</model>
+	<model name="com.um.lms.sb.model.publication">
+		<field name="uuid" type="String" />
+		<field name="publicationID" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="publicationName" type="String" />
+		<field name="addressLine1" type="String" />
+		<field name="addressLine2" type="String" />
+		<field name="city" type="String" />
+		<field name="zip" type="String" />
+		<field name="state" type="String" />
+		<field name="country" type="String" />
+	</model>
 	<model name="com.um.lms.sb.model.staff">
 		<field name="uuid" type="String" />
 		<field name="staffID" type="long" />

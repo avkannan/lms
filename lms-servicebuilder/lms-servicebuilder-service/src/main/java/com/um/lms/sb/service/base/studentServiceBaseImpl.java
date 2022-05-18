@@ -25,6 +25,10 @@ import com.liferay.portal.kernel.service.BaseServiceImpl;
 import com.liferay.portal.kernel.util.PortalUtil;
 
 import com.um.lms.sb.model.student;
+import com.um.lms.sb.service.persistence.authorPersistence;
+import com.um.lms.sb.service.persistence.bookPersistence;
+import com.um.lms.sb.service.persistence.lookupPersistence;
+import com.um.lms.sb.service.persistence.publicationPersistence;
 import com.um.lms.sb.service.persistence.staffPersistence;
 import com.um.lms.sb.service.persistence.studentPersistence;
 import com.um.lms.sb.service.studentService;
@@ -106,6 +110,18 @@ public abstract class studentServiceBaseImpl
 			throw new SystemException(e);
 		}
 	}
+
+	@Reference
+	protected authorPersistence authorPersistence;
+
+	@Reference
+	protected bookPersistence bookPersistence;
+
+	@Reference
+	protected lookupPersistence lookupPersistence;
+
+	@Reference
+	protected publicationPersistence publicationPersistence;
 
 	@Reference
 	protected staffPersistence staffPersistence;
