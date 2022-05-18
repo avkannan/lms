@@ -74,6 +74,13 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
         staffLocalServiceUtil.updatestaff(staff);
     }
     
+
+    @ProcessAction(name = "deleteStaff")
+    public void deleteStaff(ActionRequest actionRequest,ActionResponse actionResponse) throws PortalException {
+    	long staffId = CounterLocalServiceUtil.increment(staff.class.getName());
+    	
+    	staffLocalServiceUtil.deletestaff(staffId);
+    }
     
     
 }
