@@ -64,8 +64,6 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
         String enrollmentNo = ParamUtil.getString(actionRequest, "enrollmentNo");
         String firstName = ParamUtil.getString(actionRequest, "firstName");
         String lastName = ParamUtil.getString(actionRequest, "lastName");
-        String contactNo = ParamUtil.getString(actionRequest, "contactNo");
-        String city = ParamUtil.getString(actionRequest, "city");
     
         staff staff = staffLocalServiceUtil.getstaff(1l);
         staff.setFirstName(firstName);
