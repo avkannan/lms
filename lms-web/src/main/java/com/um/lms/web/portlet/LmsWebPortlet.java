@@ -5,6 +5,7 @@ import com.um.lms.sb.service.studentLocalService;
 import com.um.lms.sb.service.studentLocalServiceUtil;
 import com.um.lms.web.constants.LmsWebPortletKeys;
 import com.liferay.counter.kernel.service.CounterLocalServiceUtil;
+import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
@@ -55,6 +56,22 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
         student.setLastName(lastName);
         log.info("created");
         studentLocalServiceUtil.addstudent(student);
+    }
+    
+    @ProcessAction(name = "updateStudent")
+    public void updateStudent(ActionRequest actionRequest,ActionResponse actionResponse) throws PortalException {
+        long studentId = CounterLocalServiceUtil.increment(student.class.getName());
+        String enrollmentNo = ParamUtil.getString(actionRequest, "enrollmentNo");
+        String firstName = ParamUtil.getString(actionRequest, "firstName");
+        String lastName = ParamUtil.getString(actionRequest, "lastName");
+        String contactNo = ParamUtil.getString(actionRequest, "contactNo");
+        String city = ParamUtil.getString(actionRequest, "city");
+    
+        student student = studentLocalServiceUtil.getstudent(1l);
+        student.setFirstName(firstName);
+        student.setLastName(lastName);
+        log.info("created");
+        studentLocalServiceUtil.updatestudent(student);
     }
     
     
