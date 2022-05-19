@@ -55,8 +55,6 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
         String city = ParamUtil.getString(actionRequest, "city");
     
         staff staff = staffLocalServiceUtil.createstaff(CounterLocalServiceUtil.increment());
-        staff.setFirstName(firstName);
-        staff.setLastName(lastName);
         log.info("created");
         staffLocalServiceUtil.addstaff(staff);
     }
