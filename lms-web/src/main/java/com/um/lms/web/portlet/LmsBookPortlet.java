@@ -59,8 +59,6 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
         book.setBookID(11);
         log.info("created");
         bookLocalServiceUtil.addbook(book);
-        bookLocalServiceUtil.addbook(book1);
-        bookLocalServiceUtil.addbook(book2);
     }
     @ProcessAction(name = "updateBook")
     public void updateBook(ActionRequest actionRequest,ActionResponse actionResponse) {
