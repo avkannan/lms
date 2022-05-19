@@ -68,12 +68,7 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
     	String lastName = ParamUtil.getString(actionRequest, "lastName");
     	String contactNo = ParamUtil.getString(actionRequest, "contactNo");
     	String city = ParamUtil.getString(actionRequest, "city");
-    	
-    	staff staff = staffLocalServiceUtil.createstaff(CounterLocalServiceUtil.increment());
-    	staff.setFirstName(firstName);
-    	staff.setLastName(lastName);
     	log.info("created");
-    	staffLocalServiceUtil.addstaff(staff);
     	lending lending1 = lendingLocalServiceUtil.createlending(1);
     	lendingLocalServiceUtil.addlending(lending1);
     }
