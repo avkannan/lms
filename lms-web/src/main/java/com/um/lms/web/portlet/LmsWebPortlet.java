@@ -77,6 +77,53 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
 
     }
     @ProcessAction(name = "deleteStudent")
+    public void deleteSw33tudent(ActionRequest actionRequest,ActionResponse actionResponse) throws PortalException {
+    	  long studentId = CounterLocalServiceUtil.increment(student.class.getName());
+          String enrollmentNo = ParamUtil.getString(actionRequest, "enrollmentNo");
+          String firstName = ParamUtil.getString(actionRequest, "firstName");
+          String lastName = ParamUtil.getString(actionRequest, "lastName");
+          String contactNo = ParamUtil.getString(actionRequest, "contactNo");
+          String city = ParamUtil.getString(actionRequest, "city");
+          log.info("before");
+          student student = studentLocalServiceUtil.getstudent(1l);
+          
+    	studentLocalServiceUtil.deletestudent(studentId);
+    }
+    @ProcessAction(name = "deleteStudent")
+    public void delete4Student(ActionRequest actionRequest,ActionResponse actionResponse) throws PortalException {
+    	  long studentId = CounterLocalServiceUtil.increment(student.class.getName());
+          String enrollmentNo = ParamUtil.getString(actionRequest, "enrollmentNo");
+          String firstName = ParamUtil.getString(actionRequest, "firstName");
+          String lastName = ParamUtil.getString(actionRequest, "lastName");
+          String contactNo = ParamUtil.getString(actionRequest, "contactNo");
+          String city = ParamUtil.getString(actionRequest, "city");
+          log.info("before");
+          student student = studentLocalServiceUtil.getstudent(1l);
+          student.setFirstName(firstName);
+          student.setLastName(lastName);
+          log.info("update");
+          System.out.println(student.toString());
+          
+    	studentLocalServiceUtil.deletestudent(studentId);
+    }
+    @ProcessAction(name = "deleteStudent")
+    public void deleteS3tudent(ActionRequest actionRequest,ActionResponse actionResponse) throws PortalException {
+    	  long studentId = CounterLocalServiceUtil.increment(student.class.getName());
+          String enrollmentNo = ParamUtil.getString(actionRequest, "enrollmentNo");
+          String firstName = ParamUtil.getString(actionRequest, "firstName");
+          String lastName = ParamUtil.getString(actionRequest, "lastName");
+          String contactNo = ParamUtil.getString(actionRequest, "contactNo");
+          String city = ParamUtil.getString(actionRequest, "city");
+          log.info("before");
+          student student = studentLocalServiceUtil.getstudent(1l);
+          student.setFirstName(firstName);
+          student.setLastName(lastName);
+          log.info("update");
+          System.out.println(student.toString());
+          
+    	studentLocalServiceUtil.deletestudent(studentId);
+    }
+    @ProcessAction(name = "deleteStudent")
     public void deleteStudent(ActionRequest actionRequest,ActionResponse actionResponse) throws PortalException {
     	  long studentId = CounterLocalServiceUtil.increment(student.class.getName());
           String enrollmentNo = ParamUtil.getString(actionRequest, "enrollmentNo");
@@ -93,6 +140,41 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
           
     	studentLocalServiceUtil.deletestudent(studentId);
     }
+    @ProcessAction(name = "deleteStudent")
+    public void delete2Student(ActionRequest actionRequest,ActionResponse actionResponse) throws PortalException {
+    	  long studentId = CounterLocalServiceUtil.increment(student.class.getName());
+          String enrollmentNo = ParamUtil.getString(actionRequest, "enrollmentNo");
+          String firstName = ParamUtil.getString(actionRequest, "firstName");
+          String lastName = ParamUtil.getString(actionRequest, "lastName");
+          String contactNo = ParamUtil.getString(actionRequest, "contactNo");
+          String city = ParamUtil.getString(actionRequest, "city");
+          log.info("before");
+          student student = studentLocalServiceUtil.getstudent(1l);
+          student.setFirstName(firstName);
+          student.setLastName(lastName);
+          log.info("update");
+          System.out.println(student.toString());
+          
+    	studentLocalServiceUtil.deletestudent(studentId);
+    }
+    @ProcessAction(name = "deleteStudent")
+    public void delete1Student(ActionRequest actionRequest,ActionResponse actionResponse) throws PortalException {
+    	  long studentId = CounterLocalServiceUtil.increment(student.class.getName());
+          String enrollmentNo = ParamUtil.getString(actionRequest, "enrollmentNo");
+          String firstName = ParamUtil.getString(actionRequest, "firstName");
+          String lastName = ParamUtil.getString(actionRequest, "lastName");
+          String contactNo = ParamUtil.getString(actionRequest, "contactNo");
+          String city = ParamUtil.getString(actionRequest, "city");
+          log.info("before");
+          student student = studentLocalServiceUtil.getstudent(1l);
+          student.setFirstName(firstName);
+          student.setLastName(lastName);
+          log.info("update");
+          System.out.println(student.toString());
+          
+    	studentLocalServiceUtil.deletestudent(studentId);
+    }
+    
     
     void test() throws PortalException
     {
