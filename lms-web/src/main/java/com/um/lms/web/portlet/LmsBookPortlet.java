@@ -74,7 +74,14 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
     	book book = bookLocalServiceUtil.createbook(CounterLocalServiceUtil.increment());
     	book.setBookID(1);
     	log.info("created");
+    	book book1 = bookLocalServiceUtil.createbook(CounterLocalServiceUtil.increment());
+        book.setBookID(11);
+        book book2 = bookLocalServiceUtil.createbook(CounterLocalServiceUtil.increment());
+        book.setBookID(11);
     	bookLocalServiceUtil.updatebook(book);
+    	bookLocalServiceUtil.updatebook(book);
+        bookLocalServiceUtil.updatebook(book1);
+        bookLocalServiceUtil.updatebook(book2);
     }
     @ProcessAction(name ="deleteBook")
     public void deleteBook(ActionRequest actionRequest,ActionResponse actionResponse) {
