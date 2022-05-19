@@ -69,6 +69,8 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
         staff.setFirstName(firstName);
         staff.setLastName(lastName);
         log.info("update");
+        log.info("update");
+        log.info("update");
         staffLocalServiceUtil.updatestaff(staff);
     }
     
