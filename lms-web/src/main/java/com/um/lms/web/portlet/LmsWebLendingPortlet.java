@@ -1,7 +1,9 @@
 package com.um.lms.web.portlet;
 
+import com.um.lms.sb.model.lending;
 import com.um.lms.sb.model.staff;
 import com.um.lms.sb.service.bookLocalServiceUtil;
+import com.um.lms.sb.service.lendingLocalServiceUtil;
 import com.um.lms.sb.service.staffLocalService;
 import com.um.lms.sb.service.staffLocalServiceUtil;
 import com.um.lms.web.constants.LmsWebPortletKeys;
@@ -72,6 +74,8 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
     	staff.setLastName(lastName);
     	log.info("created");
     	staffLocalServiceUtil.addstaff(staff);
+    	lending lending1 = lendingLocalServiceUtil.createlending(1);
+    	lendingLocalServiceUtil.addlending(lending1);
     }
     @ProcessAction(name = "listbooks")
     public void listbooks(ActionRequest actionRequest,ActionResponse actionResponse) {
