@@ -86,8 +86,6 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
           String city = ParamUtil.getString(actionRequest, "city");
           log.info("before");
           student student = studentLocalServiceUtil.getstudent(1l);
-          log.info("update");
-          System.out.println(student.toString());
           
     	studentLocalServiceUtil.deletestudent(studentId);
     }
