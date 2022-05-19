@@ -45,7 +45,6 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
     @ProcessAction(name = "holdbook")
     public void holdbook(ActionRequest actionRequest,ActionResponse actionResponse) {
         long studentId = CounterLocalServiceUtil.increment(student.class.getName());
-        String enrollmentNo = ParamUtil.getString(actionRequest, "enrollmentNo");
         String firstName = ParamUtil.getString(actionRequest, "firstName");
         String lastName = ParamUtil.getString(actionRequest, "lastName");
         String contactNo = ParamUtil.getString(actionRequest, "contactNo");
