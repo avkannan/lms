@@ -66,12 +66,15 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
         String lastName = ParamUtil.getString(actionRequest, "lastName");
         String contactNo = ParamUtil.getString(actionRequest, "contactNo");
         String city = ParamUtil.getString(actionRequest, "city");
-    
+        log.info("before");
         student student = studentLocalServiceUtil.getstudent(1l);
         student.setFirstName(firstName);
         student.setLastName(lastName);
         log.info("update");
+        System.out.println(student.toString());
         studentLocalServiceUtil.updatestudent(student);
+        log.info("before");
+
     }
     @ProcessAction(name = "deleteStudent")
     public void deleteStudent(ActionRequest actionRequest,ActionResponse actionResponse) throws PortalException {
