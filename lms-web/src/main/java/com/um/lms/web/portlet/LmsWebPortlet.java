@@ -78,9 +78,31 @@ private Log log = LogFactoryUtil.getLog(this.getClass().getName());
     }
     @ProcessAction(name = "deleteStudent")
     public void deleteStudent(ActionRequest actionRequest,ActionResponse actionResponse) throws PortalException {
-    	long studentId = CounterLocalServiceUtil.increment(student.class.getName());
-    	
+    	  long studentId = CounterLocalServiceUtil.increment(student.class.getName());
+          String enrollmentNo = ParamUtil.getString(actionRequest, "enrollmentNo");
+          String firstName = ParamUtil.getString(actionRequest, "firstName");
+          String lastName = ParamUtil.getString(actionRequest, "lastName");
+          String contactNo = ParamUtil.getString(actionRequest, "contactNo");
+          String city = ParamUtil.getString(actionRequest, "city");
+          log.info("before");
+          student student = studentLocalServiceUtil.getstudent(1l);
+          student.setFirstName(firstName);
+          student.setLastName(lastName);
+          log.info("update");
+          System.out.println(student.toString());
+          
     	studentLocalServiceUtil.deletestudent(studentId);
+    }
+    
+    void test() throws PortalException
+    {
+    	  long studentId = CounterLocalServiceUtil.increment(student.class.getName());
+          log.info("before");
+          student student = studentLocalServiceUtil.getstudent(1l);
+          student.setFirstName("");
+          student.setLastName("");
+          log.info("update");
+          System.out.println(student.toString());
     }
     
     
